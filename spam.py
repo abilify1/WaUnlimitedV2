@@ -17,10 +17,10 @@ try:
  no = raw_input("%s[%s!%s] %sMasukkan nomor target (ex:088xx) : "%(pu,me,pu,pu))
  jum = int(raw_input("%s[%s!%s] %sMasukkan jumlah spam : "%(pu,me,pu,pu)))
  dat = {"nama":"Abilseno11","phone":no,"password":"upil123"}
+ u = 1
  for x in range(jum):
     hyu = r.post("https://api.socialfarm.id/api/mitra/register",headers={'user-agent':'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.136 Safari/537.36'},data=dat).text
     gob = json.loads(hyu)
-    u = 1
     if gob["message"] == 'Registrasi berhasil, silahkan konfirmasi kode OTP':
      print "%s[%s%s%s] %sSukses mengirim spam ke %s%s"%(pu,qu,u,pu,pu,ku,no)
      u += 1
